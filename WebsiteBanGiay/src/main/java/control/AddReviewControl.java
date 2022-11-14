@@ -7,10 +7,16 @@ package control;
 
 import dao.DAO;
 import entity.Account;
+import entity.Product;
 import entity.Review;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Date;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,11 +29,6 @@ import javax.servlet.http.HttpSession;
 public class AddReviewControl extends HttpServlet {
 
     /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
-	/**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
      *
@@ -64,7 +65,7 @@ public class AddReviewControl extends HttpServlet {
             		+ "                <div class=\"d-flex justify-content-between\">\r\n"
             		+ "                  <p class=\"mt-1 mb-2\">\r\n"
             		+ "                    <strong>"+a.getUser()+"</strong>\r\n"
-            		+ "                    <span>ï¿½ </span><span>"+newReview.getDateReview()+"</span>\r\n"
+            		+ "                    <span>– </span><span>"+newReview.getDateReview()+"</span>\r\n"
             		+ "                  </p>\r\n"
             		+ "                </div>\r\n"
             		+ "                <p class=\"mb-0\">"+newReview.getContentReview()+"</p>\r\n"

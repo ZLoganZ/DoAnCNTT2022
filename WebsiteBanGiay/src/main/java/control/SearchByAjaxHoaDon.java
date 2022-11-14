@@ -22,11 +22,6 @@ import javax.servlet.http.HttpServletResponse;
 public class SearchByAjaxHoaDon extends HttpServlet {
 
     /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
-	/**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
      *

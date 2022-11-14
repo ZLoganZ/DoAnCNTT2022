@@ -9,6 +9,7 @@ package control;
 import dao.DAO;
 import entity.Account;
 import java.io.IOException;
+import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,11 +22,6 @@ import javax.servlet.http.HttpSession;
 public class AddAmountCartControl extends HttpServlet {
 
     /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
-	/**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
      *

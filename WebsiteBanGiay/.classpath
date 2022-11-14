@@ -55,20 +55,5 @@
 	<classpathentry kind="lib" path="lib/slf4j-api-1.7.32.jar"/>
 	<classpathentry kind="lib" path="lib/SparseBitSet-1.2.jar"/>
 	<classpathentry kind="lib" path="lib/xmlbeans-5.0.2.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-9.0.69/lib/catalina.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="https://tomcat.apache.org/tomcat-9.0-doc/api/"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-9.0.69/lib/tomcat-websocket.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="https://tomcat.apache.org/tomcat-9.0-doc/api/"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-9.0.69/lib/websocket-api.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="https://javaee.github.io/javaee-spec/javadocs/"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
