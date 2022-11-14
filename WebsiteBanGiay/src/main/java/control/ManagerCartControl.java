@@ -8,7 +8,6 @@ package control;
 import dao.DAO;
 import entity.Account;
 import entity.Cart;
-import entity.Category;
 import entity.Product;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -25,6 +24,11 @@ import javax.servlet.http.HttpSession;
 public class ManagerCartControl extends HttpServlet {
 
     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
      *

@@ -19,6 +19,11 @@ import entity.EmailUtils;
 @WebServlet(name = "ForgotPasswordControl", urlPatterns = {"/forgotPassword"})
 public class ForgotPasswordControl extends HttpServlet {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.getRequestDispatcher("forgot-password.jsp").forward(request, response);
 	}

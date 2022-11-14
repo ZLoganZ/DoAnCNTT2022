@@ -10,7 +10,6 @@ import entity.Account;
 import entity.Cart;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,6 +22,11 @@ import javax.servlet.http.HttpSession;
 public class AddCartControl extends HttpServlet {
 
     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
      *
@@ -50,7 +54,6 @@ public class AddCartControl extends HttpServlet {
         DAO dao = new DAO();
         Cart cartExisted = dao.checkCartExist(accountID,productID);
         int amountExisted;
-        String sizeExisted;
         if(cartExisted != null) {
         	 amountExisted = cartExisted.getAmount();
         	 dao.editAmountAndSizeCart(accountID,productID, (amountExisted+amount), size);

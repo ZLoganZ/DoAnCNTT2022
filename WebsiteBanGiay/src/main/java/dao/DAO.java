@@ -19,10 +19,7 @@ import entity.Product;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 
@@ -1585,16 +1582,7 @@ public class DAO {
     }
 
    public static void main(String[] args) {
-        DAO dao = new DAO();
-//        List<Review> list = 
-//        	dao.insertProduct("Giày Bóng Đá Nam Bitis Hunter Football","https://product.hstatic.net/1000230642/product/02400vag__1__5d559f914caf4864ad99a37c18cc1a1b_1024x1024.jpg",
-//        					"535","Giày Bóng Đá Nam Biti Hunter Football","Với thiết kế năng động, Giày bóng đá Biti’s Hunter được tung ra với 5 màu sắc nổi bật tạo điểm nhấn trên sân đấu.",
-//        					"3",1,"G39","Yellow","Ho Chi Minh","https://product.hstatic.net/1000230642/product/02400vag__3__3a83e45335054285a27fba37cafb23c1_1024x1024.jpg",
-//        					"https://product.hstatic.net/1000230642/product/02400vag__4__d3693ef3babe4fc3a2908d8eb2df6e3b_1024x1024.jpg","https://product.hstatic.net/1000230642/product/02400vag__4__d3693ef3babe4fc3a2908d8eb2df6e3b_1024x1024.jpg");
-//        dao.editProduct("Giay chay du lich 2","https://giaygiare.vn/upload/sanpham/nike-sb-dunk-low-eire-net-deep-orange.jpg","301","title 3",
-//       		"desciption desciption 3", "1", "G66", "Blue", "Ho Chi Minh", "https://giaygiare.vn/upload/sanpham/nike-sb-dunk-low-eire-net-deep-orange.jpg",
-//       		"https://giaygiare.vn/upload/sanpham/nike-sb-dunk-low-eire-net-deep-orange.jpg",
-//        		"https://giaygiare.vn/upload/sanpham/nike-sb-dunk-low-eire-net-deep-orange.jpg", "3");
+        new DAO();
 
 //        List<Invoice> list = dao.searchByNgayXuat("2021-11-20");
 //        for (Invoice o : list) 

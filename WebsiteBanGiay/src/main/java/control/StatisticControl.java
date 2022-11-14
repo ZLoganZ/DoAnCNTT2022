@@ -7,12 +7,8 @@ package control;
 
 import dao.DAO;
 import entity.Account;
-import entity.Cart;
-import entity.Category;
 import entity.Invoice;
-import entity.Product;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -26,6 +22,11 @@ import javax.servlet.http.HttpSession;
 public class StatisticControl extends HttpServlet {
 
     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
      *

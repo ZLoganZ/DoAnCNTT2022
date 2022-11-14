@@ -7,21 +7,15 @@ package control;
 
 import dao.DAO;
 import entity.Account;
-import entity.Category;
 import entity.Invoice;
-import entity.Product;
-
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -32,6 +26,11 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class XuatExcelControl extends HttpServlet {
 
     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
      *

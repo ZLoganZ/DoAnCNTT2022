@@ -26,6 +26,11 @@ import entity.TongChiTieuBanHang;
 @WebServlet(name = "OrderControl", urlPatterns = {"/order"})
 public class OrderControl extends HttpServlet {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		 HttpSession session = request.getSession();
 	        Account a = (Account) session.getAttribute("acc");
