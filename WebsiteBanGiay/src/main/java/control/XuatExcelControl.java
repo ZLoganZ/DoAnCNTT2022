@@ -51,7 +51,7 @@ public class XuatExcelControl extends HttpServlet {
         List<Invoice> list = dao.searchByNgayXuat(ngayXuat);
         List<Account> listAllAccount = dao.getAllAccount();
         
-        FileOutputStream file=new FileOutputStream("C:\\HoaDonWebBanGiay\\"+ngayXuat+"hoaDon.xlsx");
+        FileOutputStream file=new FileOutputStream("D:\\Linh-tinh\\VSCode\\WEB\\DoAnCNTT2022\\HoaDonWebBanGiay\\"+ngayXuat+"hoaDon.xlsx");
         XSSFWorkbook workbook=new XSSFWorkbook();
         XSSFSheet workSheet=workbook.createSheet("1");
         XSSFRow row;

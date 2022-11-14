@@ -129,8 +129,8 @@ public class OrderControl extends HttpServlet {
 		        
 		        //old code
 				Email email =new Email();
-				email.setFrom("19110044@student.hcmute.edu.vn"); //chinh lai email quan tri tai day [chu y dung email con hoat dong]
-				email.setFromPassword("######"); //mat khau email tren
+				email.setFrom("20161051@student.hcmute.edu.vn"); //chinh lai email quan tri tai day [chu y dung email con hoat dong]
+				email.setFromPassword("yendaika"); //mat khau email tren
 				email.setTo(emailAddress);
 				email.setSubject("Dat hang thanh cong tu Shoes Family");
 				StringBuilder sb = new StringBuilder();
