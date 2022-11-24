@@ -31,12 +31,13 @@ public class ForgotPasswordControl extends HttpServlet {
 		try {
 			String emailAddress = request.getParameter("email");
 			String username = request.getParameter("username");
-			
+
 			DAO dao = new DAO();
 			Account account = dao.checkAccountExistByUsernameAndEmail(username, emailAddress);
 			if(account == null) {
 				request.setAttribute("error", "Email hoặc username không đúng!");
 			}
+			String name = account.getName();
 			if(account != null) {
 				Email email =new Email();
 				email.setFrom("vandatdinh2@gmail.com");
@@ -44,8 +45,9 @@ public class ForgotPasswordControl extends HttpServlet {
 				email.setTo(emailAddress);
 				email.setSubject("Forgot Password Function");
 				StringBuilder sb = new StringBuilder();
-				sb.append("Dear ").append(username).append("<br>");
+				sb.append("Dear ").append(name).append("<br>");
 				sb.append("You are used the forgot password. <br> ");
+				sb.append("Your username is <b>").append(account.getUser()).append(" </b> <br>");
 				sb.append("Your password is <b>").append(account.getPass()).append(" </b> <br>");
 				sb.append("Regards<br>");
 				sb.append("Administrator");

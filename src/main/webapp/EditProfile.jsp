@@ -3,34 +3,40 @@ pageEncoding="ISO-8859-1"%> <%@ taglib prefix="c"
 uri="http://java.sun.com/jsp/jstl/core"%> <%@ taglib prefix="fmt"
 uri="http://java.sun.com/jsp/jstl/fmt"%> <%@ taglib prefix="c"
 uri="http://java.sun.com/jsp/jstl/core"%>
-<link
-  href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-  rel="stylesheet"
-  id="bootstrap-css"
-/>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"/>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-      crossorigin="anonymous"
-    />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="css/login.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css"/> 
+         
+         <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" /> 
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    
+      <!-- Roboto Font -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap"> 
+  Font Awesome
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  Bootstrap core CSS
+  <link rel="stylesheet" href="https://mdbootstrap.com/previews/ecommerce-demo/css/bootstrap.min.css">
+  Material Design Bootstrap
+  <link rel="stylesheet" href="https://mdbootstrap.com/previews/ecommerce-demo/css/mdb-pro.min.css">
+  Material Design Bootstrap Ecommerce
+  <link rel="stylesheet" href="https://mdbootstrap.com/previews/ecommerce-demo/css/mdb.ecommerce.min.css"> 
     <title>Edit Profile</title>
   </head>
   <body>
@@ -48,7 +54,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
           type="text"
           id="username"
           class="form-control"
-          value="${sessionScope.acc.user }"
+          value="${sessionScope.acc.user}"
           required=""
           autofocus=""
         />
@@ -58,7 +64,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
           type="text"
           id="name"
           class="form-control"
-          value="${sessionScope.acc.name }"
+          value="${sessionScope.acc.name}"
           required=""
           autofocus=""
         />
@@ -68,7 +74,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
           type="password"
           id="password"
           class="form-control"
-          value="${sessionScope.acc.pass }"
+          value="${sessionScope.acc.pass}"
           required=""
           autofocus=""
         />
@@ -78,7 +84,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
           type="text"
           id="email"
           class="form-control"
-          value="${sessionScope.acc.email }"
+          value="${sessionScope.acc.email}"
           required=""
           autofocus=""
         />
