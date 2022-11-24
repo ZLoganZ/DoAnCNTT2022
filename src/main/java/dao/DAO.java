@@ -233,9 +233,10 @@ public class DAO {
                 list.add(new Account(rs.getInt(1),
                         rs.getString(2),
                         rs.getString(3),
-                        rs.getInt(4),
+                        rs.getString(4),
                         rs.getInt(5),
-                		rs.getString(6)));
+                        rs.getInt(6),
+                		rs.getString(7)));
             }
         } catch (Exception e) {
         }
@@ -1096,9 +1097,10 @@ public class DAO {
                 return new Account(rs.getInt(1),
                         rs.getString(2),
                         rs.getString(3),
-                        rs.getInt(4),
+                        rs.getString(4),
                         rs.getInt(5),
-                		rs.getString(6));
+                        rs.getInt(6),
+                		rs.getString(7));
             }
         } catch (Exception e) {
         }
@@ -1117,9 +1119,10 @@ public class DAO {
                 return new Account(rs.getInt(1),
                         rs.getString(2),
                         rs.getString(3),
-                        rs.getInt(4),
+                        rs.getString(4),
                         rs.getInt(5),
-                		rs.getString(6));
+                        rs.getInt(6),
+                		rs.getString(7));
             }
         } catch (Exception e) {
         }
@@ -1138,9 +1141,10 @@ public class DAO {
                 return new Account(rs.getInt(1),
                         rs.getString(2),
                         rs.getString(3),
-                        rs.getInt(4),
+                        rs.getString(4),
                         rs.getInt(5),
-                		rs.getString(6));
+                        rs.getInt(6),
+                		rs.getString(7));
             }
         } catch (Exception e) {
         }
@@ -1492,7 +1496,7 @@ public class DAO {
     }
     
     
-    public void editProfile(String username, String password, String email, int uID) {
+    public void editProfile(String username, String name, String password, String email, int uID) {
         String query = "update Account set [user]=?,\r\n"
         		+ "[pass]=?,\r\n"
         		+ "[email]=?\r\n"
@@ -1501,9 +1505,10 @@ public class DAO {
             conn = new DBContext().getConnection();//mo ket noi voi sql
             ps = conn.prepareStatement(query);
             ps.setString(1, username);
-            ps.setString(2, password);
-            ps.setString(3, email);
-            ps.setInt(4, uID);
+            ps.setString(2, name);
+            ps.setString(3, password);
+            ps.setString(4, email);
+            ps.setInt(5, uID);
             ps.executeUpdate();
         } catch (Exception e) {
         }

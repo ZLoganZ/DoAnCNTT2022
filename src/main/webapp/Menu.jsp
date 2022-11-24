@@ -25,12 +25,12 @@
                 <c:if test="${sessionScope.acc != null}">
                 	<c:if test="${sessionScope.acc.isAdmin == 0}">
                 		<li class="nav-item">
-                        	<a class="nav-link" href="#">Hello ${sessionScope.acc.user}</a>
+                        	<a class="nav-link" href="#">Hello ${sessionScope.acc.name}</a>
                     	</li>
                 	</c:if>
                 	<c:if test="${sessionScope.acc.isAdmin == 1}">
                 		<li class="nav-item">
-                        	<a class="nav-link" href="admin">ADMIN</a>
+                        	<a class="nav-link" href="admin">ADMIN ${sessionScope.acc.name}</a>
                     	</li>
                 	</c:if>
                     <li class="nav-item">

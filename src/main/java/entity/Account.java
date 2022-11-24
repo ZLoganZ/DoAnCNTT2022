@@ -9,6 +9,7 @@ package entity;
 public class Account {
     private int id;
     private String user;
+    private String name;
     private String pass;
     private int isSell;
     private int isAdmin;
@@ -51,10 +52,19 @@ public class Account {
         return isSell;
     }
 
-    public Account(int id, String user, String pass, int isSell, int isAdmin, String email) {
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Account(int id, String user, String name, String pass, int isSell, int isAdmin, String email) {
 		
 		this.id = id;
 		this.user = user;
+        this.name = name;
 		this.pass = pass;
 		this.isSell = isSell;
 		this.isAdmin = isAdmin;
@@ -67,7 +77,7 @@ public class Account {
 
 	@Override
 	public String toString() {
-		return "Account [id=" + id + ", user=" + user + ", pass=" + pass + ", isSell=" + isSell + ", isAdmin=" + isAdmin
+		return "Account [id=" + id + ", user=" + user + ", name=" + name + ", pass=" + pass + ", isSell=" + isSell + ", isAdmin=" + isAdmin
 				+ ", email=" + email + "]";
 	}
 

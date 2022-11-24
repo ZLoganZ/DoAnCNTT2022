@@ -52,7 +52,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
           required=""
           autofocus=""
         />
-        <label for="username">Name</label>
+        <label for="name">Name</label>
         <input
           name="name"
           type="text"

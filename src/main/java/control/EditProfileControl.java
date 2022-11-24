@@ -39,11 +39,12 @@ public class EditProfileControl extends HttpServlet {
         Account a = (Account) session.getAttribute("acc");
         int id = a.getId();
         String username = request.getParameter("username");
+        String name = request.getParameter("name");
         String password = request.getParameter("password");
         String email = request.getParameter("email");
         DAO dao = new DAO();
 
-        dao.editProfile(username, password, email, id);
+        dao.editProfile(username, name, password, email, id);
         
         request.setAttribute("mess", "Cap nhat tai khoan thanh cong! Hay dang nhap bang tai khoan moi!");
 
