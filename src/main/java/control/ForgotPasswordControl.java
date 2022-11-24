@@ -35,12 +35,12 @@ public class ForgotPasswordControl extends HttpServlet {
 			DAO dao = new DAO();
 			Account account = dao.checkAccountExistByUsernameAndEmail(username, emailAddress);
 			if(account == null) {
-				request.setAttribute("error", "Email hoac username sai!");
+				request.setAttribute("error", "Email hoặc username không đúng!");
 			}
 			if(account != null) {
 				Email email =new Email();
-				email.setFrom("19110044@student.hcmute.edu.vn");
-				email.setFromPassword("AibietdauB");
+				email.setFrom("vandatdinh2@gmail.com");
+				email.setFromPassword("abrclpizcdzhfpva");
 				email.setTo(emailAddress);
 				email.setSubject("Forgot Password Function");
 				StringBuilder sb = new StringBuilder();

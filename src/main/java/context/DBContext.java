@@ -20,11 +20,13 @@ public class DBContext {
                 url = "jdbc:sqlserver://"+serverName+/*":"+portNumber +*/";databaseName="+dbName;
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             conn = DriverManager.getConnection(url, userID, password);
+            System.out.println("Connected");
         }
         catch (Exception ex){
         	System.out.println("Connect failure!");
             ex.printStackTrace();
         }
+        
         return conn;
     }   
     /*Insert your other code right after this comment*/

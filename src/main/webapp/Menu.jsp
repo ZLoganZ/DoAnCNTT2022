@@ -23,9 +23,16 @@
                     </li>
                 </c:if> --%>
                 <c:if test="${sessionScope.acc != null}">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Hello ${sessionScope.acc.user}</a>
-                    </li>
+                	<c:if test="${sessionScope.acc.isAdmin == 0}">
+                		<li class="nav-item">
+                        	<a class="nav-link" href="#">Hello ${sessionScope.acc.user}</a>
+                    	</li>
+                	</c:if>
+                	<c:if test="${sessionScope.acc.isAdmin == 1}">
+                		<li class="nav-item">
+                        	<a class="nav-link" href="admin">ADMIN</a>
+                    	</li>
+                	</c:if>
                     <li class="nav-item">
                         <a class="nav-link" href="logout">Logout</a>
                     </li> 
