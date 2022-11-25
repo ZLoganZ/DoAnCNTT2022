@@ -167,9 +167,9 @@
              <div class="row" style="background-color: #ccc !important; padding: 20px; margin-top: 40px;border-radius: 20px !important; ">            
 				<h1 style="text-align:center; width:100%" id="nike">NIKE</h1>
                     <div class="col-sm-12">
-                        <div id="contentNike" class="row">
+                        <div id="contentNike" class="row" >
                         <c:forEach items="${list4NikeLast}" var="o">
-                            <div class="productNike col-12 col-md-6 col-lg-3" style="margin-bottom: 20px !important;">
+                            <div class="productNike col-12 col-md-6 col-lg-3" style="margin: 20px 0 !important;">
                                 <div class="card">
                                  <div class="view zoom z-depth-2 rounded">
                                     <img class="img-fluid w-100 " src="${o.image}" style="cursor: pointer;" alt="Card image cap">
