@@ -23,13 +23,13 @@
     
       <!-- Roboto Font -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap"> 
-  Font Awesome
+  
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-  Bootstrap core CSS
+  
   <link rel="stylesheet" href="https://mdbootstrap.com/previews/ecommerce-demo/css/bootstrap.min.css">
-  Material Design Bootstrap
+  
   <link rel="stylesheet" href="https://mdbootstrap.com/previews/ecommerce-demo/css/mdb-pro.min.css">
-  Material Design Bootstrap Ecommerce
+  
   <link rel="stylesheet" href="https://mdbootstrap.com/previews/ecommerce-demo/css/mdb.ecommerce.min.css"> 
   <!-- Your custom styles (optional) -->
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
@@ -83,7 +83,7 @@
         
         
  <!-- Carousel wrapper -->
-    <div id="introCarousel" class="carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel" style="margin-top:35px;">
+    <div id="introCarousel" class="carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel" style="margin-top:0px;">
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-mdb-target="#introCarousel" data-mdb-slide-to="0" class="active"></li>
@@ -125,34 +125,7 @@
 
             
             <div class="card-group" style="margin-top:50px;">
-  <div class="card" style="border-style: none;">
-    <img style="height:55px; width:64px; margin: auto;" src="https://giayxshop.vn/wp-content/uploads/2019/11/iconfinder_truck_1291768-1.png">
-    <div class="card-body">
-      <h5 class="card-title" style="text-align:center">GIAO HÀNG TOÀN QUỐC</h5>
-      <p class="card-text" style="text-align:center">Vận chuyển khắp Việt Nam</p>
-    </div>
-  </div>
-  <div class="card" style="border-style: none;">
-    <img class="card-img-top" style="height:55px; width:64px; margin: auto;" src="https://giayxshop.vn/wp-content/uploads/2019/11/iconfinder_payment_1954199-3.png" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title" style="text-align:center">THANH TOÁN KHI NHẬN HÀNG</h5>
-      <p class="card-text" style="text-align:center">Nhận hàng tại nhà rồi thanh toán</p>
-    </div>
-  </div>
-  <div class="card" style="border-style: none;">
-    <img class="card-img-top" style="height:55px; width:64px; margin: auto;" src="https://giayxshop.vn/wp-content/uploads/2019/11/iconfinder_service_repair_phone_mobile_wrench_screw_driver_4014703-1.png" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title" style="text-align:center">BẢO HÀNH DÀI HẠN</h5>
-      <p class="card-text" style="text-align:center">Bảo hàng lên đến 60 ngày</p>
-    </div>
-  </div>
-  <div class="card" style="border-style: none;">
-    <img class="card-img-top" style="height:55px; width:64px; margin: auto;" src="https://giayxshop.vn/wp-content/uploads/2019/11/iconfinder_refresh_3017918-1.png" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title" style="text-align:center">ĐỔI HÀNG DỄ DÀNG</h5>
-      <p class="card-text" style="text-align:center">Đổi hàng thoải mái trong 30 ngày</p>
-    </div>
-  </div>
+  
 </div>
             
            
@@ -161,12 +134,12 @@
         
             
               
-             <div class="row" style="margin-top:25px">            
-				<h1 style="text-align:center; width:100%" id="moiNhat">SẢN PHẨM MỚI NHẤT</h1>
+             <div class="row" style="background: linear-gradient(45deg, #ff216d, #2196f3); padding: 20px;border-radius: 20px !important; ">            
+				<h1 style="text-align:center; width:100%; color: red !important;" id="moiNhat">SẢN PHẨM MỚI NHẤT</h1>
                     <div class="col-sm-12">
                         <div id="contentMoiNhat" class="row">
                         <c:forEach items="${list8Last}" var="o">
-                            <div class=" col-12 col-md-6 col-lg-3">
+                            <div class=" col-12 col-md-6 col-lg-3" style="margin-bottom: 20px !important;">
                                 <div class="card">
                                 <div class="view zoom z-depth-2 rounded">
                                     <img class="img-fluid w-100" src="${o.image}" alt="Card image cap">
@@ -185,18 +158,18 @@
                             </div>
                         </c:forEach>
                     </div>
-                  
+                  <button onclick="loadMoreNew()" class="btn btn-primary" style=" margin-left: 45%;" >Xem thêm</button>
                 </div>
 
             </div>
             
             
-             <div class="row" style="margin-top:25px">            
-				<h1 style="text-align:center; width:100%" id="nike">GIÀY NIKE MỚI NHẤT</h1>
+             <div class="row" style="background-color: #ccc !important; padding: 20px; margin-top: 40px;border-radius: 20px !important; ">            
+				<h1 style="text-align:center; width:100%" id="nike">NIKE</h1>
                     <div class="col-sm-12">
                         <div id="contentNike" class="row">
                         <c:forEach items="${list4NikeLast}" var="o">
-                            <div class="productNike col-12 col-md-6 col-lg-3">
+                            <div class="productNike col-12 col-md-6 col-lg-3" style="margin-bottom: 20px !important;">
                                 <div class="card">
                                  <div class="view zoom z-depth-2 rounded">
                                     <img class="img-fluid w-100" src="${o.image}" alt="Card image cap">
@@ -215,17 +188,17 @@
                             </div>
                         </c:forEach>
                     </div>
-                   <button onclick="loadMoreNike()" class="btn btn-primary">Load more</button>
+                   <button onclick="loadMoreNike()" class="btn btn-primary" style="margin-top: 10px !important; margin-left: 45%;" >Xem thêm</button>
                 </div>
             </div>
             
             
-              <div class="row" style="margin-top:25px">            
-				<h1 style="text-align:center; width:100%" id="adidas">GIÀY ADIDAS MỚI NHẤT</h1>
+              <div class="row" style="background-color: #ccc !important; padding: 20px; margin-top: 40px; border-radius: 20px !important; ">            
+				<h1 style="text-align:center; width:100%" id="adidas">ADIDAS</h1>
                     <div class="col-sm-12">
                         <div id="contentAdidas" class="row">
                         <c:forEach items="${list4AdidasLast}" var="o">
-                            <div class="productAdidas col-12 col-md-6 col-lg-3">
+                            <div class="productAdidas col-12 col-md-6 col-lg-3" style="margin-bottom: 10px !important;">
                                 <div class="card">
                                 <div class="view zoom z-depth-2 rounded">
                                     <img class="img-fluid w-100" src="${o.image}" alt="Card image cap">
@@ -244,32 +217,12 @@
                             </div>
                         </c:forEach>
                     </div>
-                   <button onclick="loadMoreAdidas()" class="btn btn-primary">Load more</button>
+                   <button onclick="loadMoreAdidas()" class="btn btn-primary" style="margin-top: 10px !important; margin-left: 45%;" >Xem thêm</button>
                 </div>
             </div>
             
             
-             <div class="row" style="margin-top:50px">            
-                    <div class="col-sm-12">
-                        <div id="content" class="row">
-                            <div class=" col-12 col-md-12 col-lg-6">
-                                    <div class="card-body">
-                                        <h4 class="card-title show_txt" style="text-align:center; font-size:18pt; color:#b57b00;">Về chúng tôi</h4>
-                                        <h2 class="card-title show_txt" style="text-align:center; font-size:24pt;">Shoes Family</h2>
-                                        <p style="text-align:center;">Uy tín lâu năm chuyên cung cấp giày thể thao sneaker nam, nữ hàng Replica 1:1 - 
-                                        Like Auth với chất lượng đảm bảo và giá tốt nhất tại Hà Nội, tpHCM.</p>
-										<p>Bạn đang cần tìm một đôi giày thể thao sneaker đẹp và hợp thời trang và đang hot Trends 
-										đến từ các thương hiệu lớn nhưng lại không đủ hầu bao để sắm được hàng chính hãng? 
-										Hãy đến với ShoesFamily – nơi bạn thỏa lòng mong ước mà chỉ phải chi ra 1 phần nhỏ so với dòng chính hãng ngoài store 
-										mà vẫn sắm cho mình được một đôi chất lượng từ rep 1:1 đến siêu cấp like auth.</p>                  
-                                    </div>  
-                            </div>
-                            <div class=" col-12 col-md-12 col-lg-6">
-                                    <img class="card-img-top" src="https://shopgiayreplica.com/wp-content/uploads/2020/11/shop-giay-replica-1-1.jpg" alt="Card image cap">        
-                            </div>
-                    </div>
-                </div>
-            </div>
+             
             
             
             
@@ -394,4 +347,3 @@
   <script type="text/javascript" src="https://mdbootstrap.com/previews/ecommerce-demo/js/mdb.ecommerce.min.js"></script>
     </body>
 </html>
-
