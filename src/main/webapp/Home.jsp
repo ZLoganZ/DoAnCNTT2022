@@ -142,7 +142,7 @@
                             <div class=" col-12 col-md-6 col-lg-3" style="margin-bottom: 20px !important;">
                                 <div class="card">
                                 <div class="view zoom z-depth-2 rounded">
-                                    <img class="img-fluid w-100" src="${o.image}" alt="Card image cap">
+                                    <img class="img-fluid w-100" src="${o.image}" style="cursor: pointer;" alt="Card image cap">
                                    
                                      </div>
                                     <div class="card-body">
@@ -172,7 +172,7 @@
                             <div class="productNike col-12 col-md-6 col-lg-3" style="margin-bottom: 20px !important;">
                                 <div class="card">
                                  <div class="view zoom z-depth-2 rounded">
-                                    <img class="img-fluid w-100" src="${o.image}" alt="Card image cap">
+                                    <img class="img-fluid w-100 " src="${o.image}" style="cursor: pointer;" alt="Card image cap">
                                     </div>
                                     <div class="card-body">
                                         <h4 class="card-title show_txt"><a href="detail?pid=${o.id}" title="View Product">${o.name}</a></h4>
@@ -201,7 +201,7 @@
                             <div class="productAdidas col-12 col-md-6 col-lg-3" style="margin-bottom: 10px !important;">
                                 <div class="card">
                                 <div class="view zoom z-depth-2 rounded">
-                                    <img class="img-fluid w-100" src="${o.image}" alt="Card image cap">
+                                    <img class="img-fluid w-100" src="${o.image}" style="cursor: pointer;" alt="Card image cap">
                                     </div>
                                     <div class="card-body">
                                         <h4 class="card-title show_txt"><a href="detail?pid=${o.id}" title="View Product">${o.name}</a></h4>
