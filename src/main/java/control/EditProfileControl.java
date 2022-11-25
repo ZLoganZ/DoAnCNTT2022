@@ -40,12 +40,15 @@ public class EditProfileControl extends HttpServlet {
         int id = a.getId();
         String username = request.getParameter("username");
         String name = request.getParameter("name");
+        System.out.println(name);
         String password = request.getParameter("password");
         String email = request.getParameter("email");
         DAO dao = new DAO();
 
         dao.editProfile(username, name, password, email, id);
-        
+
+        session.removeAttribute("acc");
+
         request.setAttribute("mess", "Cap nhat tai khoan thanh cong! Hay dang nhap bang tai khoan moi!");
 
         request.getRequestDispatcher("Login.jsp").forward(request, response);
