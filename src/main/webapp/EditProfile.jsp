@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="ISO-8859-1"%> <%@ taglib prefix="c"
 uri="http://java.sun.com/jsp/jstl/core"%> <%@ taglib prefix="fmt"
 uri="http://java.sun.com/jsp/jstl/fmt"%> <%@ taglib prefix="c"
@@ -29,19 +29,19 @@ uri="http://java.sun.com/jsp/jstl/core"%>
     
       <!-- Roboto Font -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap"> 
-  Font Awesome
+  
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-  Bootstrap core CSS
+
   <link rel="stylesheet" href="https://mdbootstrap.com/previews/ecommerce-demo/css/bootstrap.min.css">
-  Material Design Bootstrap
+  
   <link rel="stylesheet" href="https://mdbootstrap.com/previews/ecommerce-demo/css/mdb-pro.min.css">
-  Material Design Bootstrap Ecommerce
+
   <link rel="stylesheet" href="https://mdbootstrap.com/previews/ecommerce-demo/css/mdb.ecommerce.min.css"> 
     <title>Edit Profile</title>
   </head>
   <body>
     <jsp:include page="Menu.jsp"></jsp:include>
-    <div id="logreg-forms">
+    <div id="logreg-forms" style="margin-top: 100px;">
       <form class="form-signin" action="editProfile" method="post">
         <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">
           Edit Profile
