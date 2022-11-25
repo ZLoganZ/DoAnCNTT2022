@@ -46,6 +46,8 @@ public class EditProfileControl extends HttpServlet {
 
         dao.editProfile(username, name, password, email, id);
         
+        response.sendRedirect("logout");
+
         request.setAttribute("mess", "Cap nhat tai khoan thanh cong! Hay dang nhap bang tai khoan moi!");
 
         request.getRequestDispatcher("Login.jsp").forward(request, response);
