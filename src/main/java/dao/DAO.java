@@ -1498,6 +1498,7 @@ public class DAO {
     
     public void editProfile(String username, String name, String password, String email, int uID) {
         String query = "update Account set [user]=?,\r\n"
+                + "[name]=?,\r\n"
         		+ "[pass]=?,\r\n"
         		+ "[email]=?\r\n"
         		+ "where [uID] = ?";
