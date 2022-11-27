@@ -10,7 +10,7 @@
                     <li><a href="#nike">Nike</a></li>
                     <li><a href="#adidas">Adidas</a></li>
                     <li><a href="#moiNhat">Mới nhất</a></li>
-                    <li><a href="#tatCa">Tất cả</a></li>
+                    <li><a href="shop">Tất cả</a></li>
                 </ul>
             </div>
 
@@ -37,7 +37,8 @@
                     <li><i class="fa fa-home mr-2"></i>Số 1 Võ Văn Ngân Thủ Đức</li>
                     <li><i class="fa fa-envelope mr-2"></i>vandatdinh2@gmail.com</li>
                     <li><i class="fa fa-phone mr-2"></i>0328708675</li>
-                    <li><i class="fa fa-print mr-2"></i></li>
+                    <li><i class="fas fa-fax mr-2"></i>0985927403</li>
+                    <li><i class="fa fa-print mr-2"></i>Nothing to print</li>
                 </ul>
             </div>
             <div class="col-12 copyright mt-3">
@@ -46,7 +47,7 @@
                 </p>
             </div>
              <div class="col text-center border-top">
-                <strong>vandat @ 2021. All rights reserved.</strong>
+                <strong>vandat @ 2022. All rights reserved.</strong>
              </div>
         </div>
     </div>
