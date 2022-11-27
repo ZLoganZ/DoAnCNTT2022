@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="css/mdb.min.css" />
     <!-- Custom styles -->
     <link rel="stylesheet" href="css/style.css" />
-    
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
       <!-- Roboto Font -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap"> 
   
@@ -44,23 +44,21 @@
       }
 
       .carousel-item:nth-child(1) {
-        background-image: url('https://file.hstatic.net/1000230642/file/banner__1__9831c8de62ca4121b4f3caa18164f352_master.jpg');
+        background-image: url('https://i.pinimg.com/originals/fa/45/96/fa4596ad9a9d39901eeb455ed4f74e44.jpg');
         background-repeat: no-repeat;
-        background-size: 100% 100%;
         background-position: center center;
       }
 
       .carousel-item:nth-child(2) {
-        background-image: url('https://file.hstatic.net/1000230642/file/web-top-banner_68b9a0c957374772bdf25d1d0f312b11_master.jpg');
+        background-image: url('https://i.pinimg.com/originals/d0/b6/5c/d0b65c5c53657f897af6862c44d8a5e2.jpg');
         background-repeat: no-repeat;
-        background-size: 100% 100%;
         background-position: center center;
       }
 
       .carousel-item:nth-child(3) {
-        background-image: url('https://file.hstatic.net/1000230642/file/banner_central_opt_2_76f1c057c7dc43ee9c8a36c6bee9ac4d_master.jpg');
+        background-image: url('https://lh3.googleusercontent.com/u/1/drive-viewer/AFDK6gMrF4pTkUKv6AMZNkHRgLr0UHGQcREwEmLo6S_VoKLXscb1WenSRsWskJChT9K5UGEuU5S_ciHI5P8YKS2hAXOkltBtyQ=w1920-h925');
         background-repeat: no-repeat;
-        background-size: 100% 100%;
+        background-size : 100% 100%;
         background-position: center center;
       }
 
@@ -83,7 +81,7 @@
         
         
  <!-- Carousel wrapper -->
-    <div id="introCarousel" class="carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel" style="margin-top:0px;">
+    <div id="introCarousel" class="carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel" style="margin-top:76px !important;">
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-mdb-target="#introCarousel" data-mdb-slide-to="0" class="active"></li>
@@ -112,11 +110,11 @@
 
       <!-- Controls -->
       <a class="carousel-control-prev" href="#introCarousel" role="button" data-mdb-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="fas fa-angle-left" aria-hidden="true" style = "font-size: 40px !important"></span>
         <span class="sr-only">Previous</span>
       </a>
       <a class="carousel-control-next" href="#introCarousel" role="button" data-mdb-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="fas fa-angle-right" aria-hidden="true" style = "font-size: 40px !important"></span>
         <span class="sr-only">Next</span>
       </a>
     </div>
@@ -136,7 +134,7 @@
               
              <div class="row" style="background: linear-gradient(45deg, #ff216d, #2196f3); padding: 20px;border-radius: 20px !important; ">            
 				<h1 style="text-align:center; width:100%; color: red !important;" id="moiNhat">SẢN PHẨM MỚI NHẤT</h1>
-                    <div class="col-sm-12">
+                    <div class="col-sm-12" style = "text-align: center;">
                         <div id="contentMoiNhat" class="row">
                         <c:forEach items="${list8Last}" var="o">
                             <div class=" col-12 col-md-6 col-lg-3" style="margin-bottom: 20px !important;">
@@ -158,7 +156,7 @@
                             </div>
                         </c:forEach>
                     </div>
-                  <button onclick="loadMoreNew()" class="btn btn-primary" style=" margin-left: 45%;" >Xem thêm</button>
+                  <button onclick="loadMoreNew()" class="btn btn-primary">Xem thêm</button>
                 </div>
 
             </div>
@@ -166,7 +164,7 @@
             
              <div class="row" style="background-color: #ccc !important; padding: 20px; margin-top: 40px;border-radius: 20px !important; ">            
 				<h1 style="text-align:center; width:100%" id="nike">NIKE</h1>
-                    <div class="col-sm-12">
+                    <div class="col-sm-12" style = "text-align: center;">
                         <div id="contentNike" class="row" >
                         <c:forEach items="${list4NikeLast}" var="o">
                             <div class="productNike col-12 col-md-6 col-lg-3" style="margin: 20px 0 !important;">
@@ -188,14 +186,14 @@
                             </div>
                         </c:forEach>
                     </div>
-                   <button onclick="loadMoreNike()" class="btn btn-primary" style="margin-top: 10px !important; margin-left: 45%;" >Xem thêm</button>
+                   <button onclick="loadMoreNike()" class="btn btn-primary">Xem thêm</button>
                 </div>
             </div>
             
             
               <div class="row" style="background-color: #ccc !important; padding: 20px; margin-top: 40px; border-radius: 20px !important; ">            
 				<h1 style="text-align:center; width:100%" id="adidas">ADIDAS</h1>
-                    <div class="col-sm-12">
+                    <div class="col-sm-12" style = "text-align: center;">
                         <div id="contentAdidas" class="row">
                         <c:forEach items="${list4AdidasLast}" var="o">
                             <div class="productAdidas col-12 col-md-6 col-lg-3" style="margin-bottom: 10px !important;">
@@ -217,7 +215,7 @@
                             </div>
                         </c:forEach>
                     </div>
-                   <button onclick="loadMoreAdidas()" class="btn btn-primary" style="margin-top: 10px !important; margin-left: 45%;" >Xem thêm</button>
+                   <button onclick="loadMoreAdidas()" class="btn btn-primary">Xem thêm</button>
                 </div>
             </div>
             
