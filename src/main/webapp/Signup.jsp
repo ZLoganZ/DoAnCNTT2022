@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <link href="css/login.css" rel="stylesheet" type="text/css"/>
-        <title>Login Form</title>
+        <title>Sign Up Form</title>
     </head>
     <body>
     <jsp:include page="Menu.jsp"></jsp:include>
@@ -29,7 +29,7 @@
 				  	${mess}
 				</div>
 				</c:if>
-            <form class="form-signin" action="login" method="post">
+          <!--<form class="form-signin" action="login" method="post">
                 <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>  
                 <input name="user" value="${username }"  type="text" id="inputEmail" class="form-control" placeholder="Username" required="" autofocus="">
                 <input name="pass" value="${password }" type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
@@ -41,19 +41,19 @@
 
                 <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Sign in</button>
                 <hr>
-                <a href="signup" id="btn-signup"><i class="fas fa-user-plus"></i> Sign up New Account</a>
-            </form>
+                <button class="btn btn-primary btn-block" type="button" id="btn-signup"><i class="fas fa-user-plus"></i> Sign up New Account</button>
+            </form>-->
 
-            <!--  <form action="signup" method="post" class="form-signup">
+            <form action="signup" method="post" class="form-signin">
                 <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign up</h1>
                 <input name="user" type="text" id="user-name" class="form-control" placeholder="User name" required="" autofocus="">
                 <input name="name" type="text" id="name" class="form-control" placeholder="Name" required="" autofocus="">
                 <input name="pass" type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="">
                 <input name="repass" type="password" id="user-repeatpass" class="form-control" placeholder="Repeat Password" required autofocus="">
-				 <input name="email" type="email" id="email" class="form-control" placeholder="Email" required="" autofocus="">
+				<input name="email" type="email" id="email" class="form-control" placeholder="Email" required="" autofocus="">
                 <button class="btn btn-primary btn-block" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
-                <a href="#" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
-            </form> -->
+                <a href="login" id="cancel_signup"><i class="fas fa-angle-left"></i> Back to Login Page</a>
+            </form>
             <br>
 
         </div>

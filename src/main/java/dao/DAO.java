@@ -1172,15 +1172,16 @@ public class DAO {
         return null;
     }
 
-    public void singup(String user, String pass, String email) {
+    public void singup(String user, String name, String pass, String email) {
         String query = "insert into Account\n"
-                + "values(?,?,0,0,?)";
+                + "values(?,?,?,0,0,?)";
         try {
             conn = new DBContext().getConnection();//mo ket noi voi sql
             ps = conn.prepareStatement(query);
             ps.setString(1, user);
-            ps.setString(2, pass);
-            ps.setString(3, email);
+            ps.setString(2, name);
+            ps.setString(3, pass);
+            ps.setString(4, email);
             ps.executeUpdate();
         } catch (Exception e) {
         }

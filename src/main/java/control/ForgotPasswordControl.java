@@ -35,7 +35,7 @@ public class ForgotPasswordControl extends HttpServlet {
 			DAO dao = new DAO();
 			Account account = dao.checkAccountExistByUsernameAndEmail(username, emailAddress);
 			if(account == null) {
-				request.setAttribute("error", "Email hoặc username không đúng!");
+				request.setAttribute("error", "Email or username is incorrect!");
 			}
 			String name = account.getName();
 			if(account != null) {
@@ -55,7 +55,7 @@ public class ForgotPasswordControl extends HttpServlet {
 				email.setContent(sb.toString());
 				EmailUtils.send(email);
 				
-				request.setAttribute("mess", "Mat khau da duoc gui den email cua ban!");
+				request.setAttribute("mess", "Password has been sent to your email!");
 				
 				
 			}
