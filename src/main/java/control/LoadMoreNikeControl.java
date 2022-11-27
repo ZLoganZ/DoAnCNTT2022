@@ -40,7 +40,7 @@ public class LoadMoreNikeControl extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         for (Product o : list) {
-            out.println("<div class=\"productNike col-12 col-md-6 col-lg-3\">\r\n"
+            out.println("<div class=\"productNike col-12 col-md-6 col-lg-3\" style=\"margin-bottom: 20px !important;\">\r\n"
                     + "                                <div class=\"card\">\r\n"
                     + "                                 <div class=\"view zoom z-depth-2 rounded\">\r\n"
                     + "                                    <img class=\"img-fluid w-100\" src=\"" + o.getImage()
