@@ -197,7 +197,7 @@
                     <div class="col-sm-12" style = "text-align: center;">
                         <div id="contentAdidas" class="row">
                         <c:forEach items="${list4AdidasLast}" var="o">
-                            <div class="productAdidas col-12 col-md-6 col-lg-3" style="margin-bottom: 10px !important;">
+                            <div class="productAdidas col-12 col-md-6 col-lg-3" style="margin-bottom: 20px !important;">
                                 <div class="card">
                                 <div class="view zoom z-depth-2 rounded">
                                     <img class="img-fluid w-100" src="${o.image}" style="cursor: pointer;" alt="Card image cap">
