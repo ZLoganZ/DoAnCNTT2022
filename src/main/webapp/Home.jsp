@@ -46,6 +46,7 @@
       .carousel-item:nth-child(1) {
         background-image: url('https://i.pinimg.com/originals/fa/45/96/fa4596ad9a9d39901eeb455ed4f74e44.jpg');
         background-repeat: no-repeat;
+        background-size: 100% 100%;
         background-position: center center;
       }
 
