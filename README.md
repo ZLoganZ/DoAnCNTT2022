@@ -1,2 +1,6 @@
 # Đồ án Công Nghệ thông tin
-Đồ án CNTT 2022
+Đề tài: Website bán giày Second-hand
+
+Sinh viên thực hiện:
+ - Nguyễn Hoàng Hải - 20161051
+ - Nguyễn Văn Đạt - 20110455
