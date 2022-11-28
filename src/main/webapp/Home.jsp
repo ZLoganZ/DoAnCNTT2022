@@ -53,6 +53,7 @@
       .carousel-item:nth-child(2) {
         background-image: url('https://i.pinimg.com/originals/d0/b6/5c/d0b65c5c53657f897af6862c44d8a5e2.jpg');
         background-repeat: no-repeat;
+        background-size : 100% 100%;
         background-position: center center;
       }
 
@@ -82,7 +83,7 @@
         
         
  <!-- Carousel wrapper -->
-    <div id="introCarousel" class="carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel" style="margin-top:76px !important;">
+    <div id="introCarousel" class="carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel" style="margin-top:0px !important;">
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-mdb-target="#introCarousel" data-mdb-slide-to="0" class="active"></li>
