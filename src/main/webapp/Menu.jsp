@@ -8,7 +8,7 @@
     }
     
 </style>
-<nav class="navbar navbar-expand-md" style="position: fixed; top: 0; width:100%;  z-index: 100000; background-color: #fff; backdrop-filter: opacity(80%) !important; color: #ccc;">
+<nav class="navbar navbar-expand-md" style="position: fixed; top: 0; width:100%; z-index: 100000; background:rgba(120, 130, 140, 0.6); backdrop-filter: opacity(90%); color: #fff;">
     <div class="container" >
         <a class="navbar-brand" href="home">King Shoes</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
