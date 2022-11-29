@@ -39,7 +39,7 @@ public class OrderControl extends HttpServlet {
 
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
 	throws ServletException, IOException {
-		HttpSession session = request.getSession();
+			HttpSession session = request.getSession();
 	        Account a = (Account) session.getAttribute("acc");
 	        if(a == null) {
 	        	response.sendRedirect("login");
@@ -155,7 +155,7 @@ public class OrderControl extends HttpServlet {
 				email.setFrom("vandatdinh2@gmail.com"); //chinh lai email quan tri tai day [chu y dung email con hoat dong]
 				email.setFromPassword("abrclpizcdzhfpva"); //mat khau email tren
 				email.setTo(emailAddress);
-				email.setSubject("Dat hang thanh cong tu Shoes Family");
+				email.setSubject("Dat hang thanh cong tu King Shoes!");
 				StringBuilder sb = new StringBuilder();
 				sb.append("Dear ").append(name).append("<br>");
 				sb.append("Ban vua dat dang tu Shoes Family. <br> ");
