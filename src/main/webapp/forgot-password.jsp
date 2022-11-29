@@ -29,6 +29,7 @@
 	integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
 	crossorigin="anonymous">
     <style><%@include file="/css/fpass.css"%></style>
+    <link rel="stylesheet" href="https://mdbootstrap.com/previews/ecommerce-demo/css/bootstrap.min.css">
 <title>Forgot Password Form</title>
 </head>
 <body>
