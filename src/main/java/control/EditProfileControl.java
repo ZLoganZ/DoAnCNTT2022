@@ -71,6 +71,15 @@ public class EditProfileControl extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         //processRequest(request, response);
+        response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("UTF-8");
+        HttpSession session = request.getSession();
+        Account a = (Account) session.getAttribute("acc");
+        if(a == null) {
+        	response.sendRedirect("login");
+        	return;
+        }
+        a.setPass(a.getPass().trim());
         request.getRequestDispatcher("EditProfile.jsp").forward(request, response);
     }
 

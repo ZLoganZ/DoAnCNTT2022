@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <style><%@include file="/css/login.css"%></style>
+        <link rel="stylesheet" href="https://mdbootstrap.com/previews/ecommerce-demo/css/bootstrap.min.css">
         <title>Login Form</title>
     </head>
     <body>
@@ -62,12 +63,13 @@
                 <div class="inputBox">
                     <input name="user" value="${username }"  type="text" required="required">
                     <span>User name</span>
-                    <i></i>
+                    <i class="bg"></i>
                 </div>
                 <div class="inputBox">
                     <input name="pass" value="${password }" type="password" required="required">
                     <span>Password</span>
-                    <i></i>
+                    <i class="bg"></i>
+                    <i name="check" class="fas fa-eye"></i>
                 </div>
 
                 <div class = "links">
@@ -93,14 +95,22 @@
                 $('#logreg-forms .form-signin').toggle(); // display:block or none
                 $('#logreg-forms .form-signup').toggle(); // display:block or none
             }
-
-            $(() => {
-                // Login Register Form
-                //$('#logreg-forms #forgot_pswd').click(toggleResetPswd);
-                //$('#logreg-forms #cancel_reset').click(toggleResetPswd);
-                //$('#logreg-forms #btn-signup').click(toggleSignUp);
-                //$('#logreg-forms #cancel_signup').click(toggleSignUp);
-            })
+            function toggleSeePassword(e) {
+                e.preventDefault();
+                var input = $(".box .inputBox input[name='pass']");
+                var icon = $(".box .inputBox i[name='check']");
+                if (input.attr("type") == "password") {
+                  input.attr("type", "text");
+                  icon.attr("class", "fas fa-eye-slash");
+                } else {
+                  input.attr("type", "password");
+                  icon.attr("class", "fas fa-eye");
+                }
+              }
+        
+              $(() => {
+                $(".box .inputBox i[name='check']").click(toggleSeePassword);
+              });
             
             window.addEventListener("load",function loadAmountCart(){
                         	 $.ajax({

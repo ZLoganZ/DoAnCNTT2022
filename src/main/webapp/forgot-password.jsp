@@ -39,13 +39,13 @@
                 <c:if test="${mess!=null }">
                     <style>
                         .box {
-                            height: 450px !important;
+                            height: 480px !important;
                         }
                         .box::before{
-                            height: 450px !important;
+                            height: 480px !important;
                         }
                         .box::after{
-                            height: 450px !important;
+                            height: 480px !important;
                         }
                         .inputBox{
                             margin-top: 20px !important;

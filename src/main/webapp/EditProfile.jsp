@@ -15,28 +15,13 @@ uri="http://java.sun.com/jsp/jstl/core"%>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="css/login.css" rel="stylesheet" type="text/css" />
-    <link href="css/style.css" rel="stylesheet" type="text/css"/> 
          
          <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
-    <!-- Google Fonts Roboto -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" /> 
-    <!-- MDB -->
-    <link rel="stylesheet" href="css/mdb.min.css" />
     <!-- Custom styles -->
     <style><%@include file="/css/editP.css"%></style>
-    
-      <!-- Roboto Font -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap"> 
-  
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
 
   <link rel="stylesheet" href="https://mdbootstrap.com/previews/ecommerce-demo/css/bootstrap.min.css">
-  
-  <link rel="stylesheet" href="https://mdbootstrap.com/previews/ecommerce-demo/css/mdb-pro.min.css">
-
-  <link rel="stylesheet" href="https://mdbootstrap.com/previews/ecommerce-demo/css/mdb.ecommerce.min.css"> 
     <title>Edit Profile</title>
   </head>
   <body>
@@ -72,7 +57,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
           required="required"
         />
         <span>Username</span>
-        <i></i>
+        <i class="bg"></i>
         </div>
         <div class="inputBox">
           <input
@@ -82,18 +67,18 @@ uri="http://java.sun.com/jsp/jstl/core"%>
           required="required"
         />
         <span>Name</span>
-        <i></i>
+        <i class="bg"></i>
         </div>
         
         <div class="inputBox">
           <input
-          name="password"
-          type="password"
-          value="${sessionScope.acc.pass}"
-          required="required"
-        />
+            name="password"
+            type="password"
+            value="${sessionScope.acc.pass}"
+            required="required"/>
         <span>Password</span>
-        <i></i>
+        <i class="bg"></i>
+        <i name="check" class="fas fa-eye"></i>
         </div>
         
         <div class="inputBox">
@@ -104,7 +89,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
           required="required"
         />
         <span>Email</span>
-        <i></i>
+        <i class="bg"></i>
         </div>
         
         <input type="submit" value="Edit">
@@ -129,13 +114,22 @@ uri="http://java.sun.com/jsp/jstl/core"%>
         $("#logreg-forms .form-signin").toggle(); // display:block or none
         $("#logreg-forms .form-signup").toggle(); // display:block or none
       }
+      
+      function toggleSeePassword(e) {
+        e.preventDefault();
+        var input = $(".box .inputBox input[name='password']");
+        var icon = $(".box .inputBox i[name='check']");
+        if (input.attr("type") == "password") {
+          input.attr("type", "text");
+          icon.attr("class", "fas fa-eye-slash");
+        } else {
+          input.attr("type", "password");
+          icon.attr("class", "fas fa-eye");
+        }
+      }
 
       $(() => {
-        // Login Register Form
-        $("#logreg-forms #forgot_pswd").click(toggleResetPswd);
-        $("#logreg-forms #cancel_reset").click(toggleResetPswd);
-        $("#logreg-forms #btn-signup").click(toggleSignUp);
-        $("#logreg-forms #cancel_signup").click(toggleSignUp);
+        $(".box .inputBox i[name='check']").click(toggleSeePassword);
       });
 
       window.addEventListener(
