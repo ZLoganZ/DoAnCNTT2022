@@ -29,7 +29,7 @@ body {
   width: 380px;
   height: 700px;
   transform-origin: bottom right;
-  background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+  background: linear-gradient(0deg, transparent, #001aff, #001aff);
   animation: animate 6s linear infinite;
 }
 .box::after {
@@ -41,7 +41,7 @@ body {
   width: 380px;
   height: 700px;
   transform-origin: bottom right;
-  background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+  background: linear-gradient(0deg, transparent, #001aff, #001aff);
   animation: animate 6s linear infinite;
   animation-delay: -3s;
 }
@@ -64,7 +64,7 @@ body {
   flex-direction: column;
 }
 .box h2 {
-  color: #45f3ff;
+  color: #00aeff;
   font-weight: 500;
   text-align: center;
   letter-spacing: 0.1em;
@@ -100,7 +100,7 @@ body {
 }
 .inputBox input:valid ~ span,
 .inputBox input:focus ~ span {
-  color: #45f3ff;
+  color: #00aeff;
   transform: translateX(0px) translateY(-34px);
   font-size: 0.75em;
 }
@@ -110,7 +110,7 @@ body {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background: #45f3ff;
+  background: #00aeff;
   border-radius: 4px;
   overflow: hidden;
   transition: 0.5s;
@@ -128,18 +128,18 @@ body {
 .links a {
   margin: 20px 0;
   font-size: 0.9em;
-  color: #8f8f8f;
+  color: #000000;
   text-decoration: beige;
 }
 .links a:hover,
 .links a:nth-child(2) {
-  color: #45f3ff;
+  color: #00aeff;
 }
 .box input[type="submit"] {
   border: none;
   outline: none;
   padding: 11px 26px 11px 23px;
-  background: #45f3ff;
+  background: #00aeff;
   cursor: pointer;
   border-radius: 4px;
   font-weight: 600;

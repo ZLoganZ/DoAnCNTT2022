@@ -1,5 +1,5 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> <%@page
-contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
   <head> </head>
@@ -90,7 +90,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
                   <a
                     class="nav-link"
                     style="
-                      color: rgb(255, 166, 0) !important;
+                      color: rgb(255, 0, 0) !important;
                       font-weight: Bold;
                     "
                     href="#"
@@ -103,7 +103,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
                   <a
                     class="nav-link"
                     style="
-                      color: rgb(255, 166, 0) !important;
+                      color: rgb(255, 0, 0) !important;
                       font-weight: Bold;
                     "
                     href="admin"
@@ -114,7 +114,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
               <li class="nav-item">
                 <a
                   class="nav-link"
-                  style="color: rgb(255, 166, 0) !important; font-weight: Bold"
+                  style="color: rgb(255, 0, 0) !important; font-weight: Bold"
                   href="logout"
                   >Logout</a
                 >
@@ -124,9 +124,9 @@ contentType="text/html" pageEncoding="UTF-8"%>
               <li class="nav-item">
                 <a
                   class="nav-link"
-                  style="color: rgb(255, 166, 0) !important"
+                  style="color: rgb(255, 0, 0) !important"
                   href="login"
-                  >Login</a
+                  >Sign in</a
                 >
               </li>
             </c:if>
@@ -134,9 +134,9 @@ contentType="text/html" pageEncoding="UTF-8"%>
               <li class="nav-item">
                 <a
                   class="nav-link"
-                  style="color: black !important"
-                  href="forgotPassword"
-                  >Forgot Password</a
+                  style="color: rgb(255, 0, 0) !important"
+                  href="signup"
+                  >Sign up</a
                 >
               </li>
             </c:if>
@@ -145,7 +145,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
                 <a
                   class="nav-link"
                   style="color: black !important"
-                  href="EditProfile.jsp"
+                  href="editProfile"
                   >Edit Profile</a
                 >
               </li>

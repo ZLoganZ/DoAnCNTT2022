@@ -19,19 +19,28 @@
     <jsp:include page="Menu.jsp"></jsp:include>
     
         <div class="box">
-        	<c:if test="${error!=null }">
-                 <div class="alert alert-danger" role="alert">
+            <form action="signup" method="post">
+                <h2>Sign up</h2>
+                <c:if test="${error!=null }">
+                <style>
+                    .inputBox{
+                        margin-top: 20px !important;
+                    }
+                </style>
+                 <div class="alert alert-danger" role="alert" style="margin-top:10px !important;">
 						 ${error}
 				</div>
 				</c:if>
 				<c:if test="${mess!=null }">
-                <div class="alert alert-success" role="alert">
+                    <style>
+                        .inputBox{
+                            margin-top: 20px !important;
+                        }
+                    </style>
+                <div class="alert alert-success" role="alert" style="margin-top:10px !important;">
 				  	${mess}
 				</div>
 				</c:if>
-
-            <form action="signup" method="post">
-                <h2>Sign up</h2>
                 <div class="inputBox">
                     <input name="user" type="text" required="required">
                     <span>

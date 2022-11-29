@@ -19,18 +19,46 @@
     <jsp:include page="Menu.jsp"></jsp:include>
     
         <div class="box">
-        	<c:if test="${error!=null }">
-                 <div class="alert alert-danger" role="alert">
+            <form action="login" method="post">
+                <h2>Sign in</h2>
+                <c:if test="${error!=null }">
+                    <style>
+                        .box {
+                            height: 450px !important;
+                        }
+                        .box::before{
+                            height: 450px !important;
+                        }
+                        .box::after{
+                            height: 450px !important;
+                        }
+                        .inputBox{
+                            margin-top: 20px !important;
+                        }
+                    </style>
+                 <div class="alert alert-danger" role="alert" style="margin-top:10px !important;">
 						 ${error}
 				</div>
 				</c:if>
 				<c:if test="${mess!=null }">
-                <div class="alert alert-success" role="alert">
+                    <style>
+                        .box {
+                            height: 480px !important;
+                        }
+                        .box::before{
+                            height: 480px !important;
+                        }
+                        .box::after{
+                            height: 480px !important;
+                        }
+                        .inputBox{
+                            margin-top: 20px !important;
+                        }
+                    </style>
+                <div class="alert alert-success" role="alert" style="margin-top:10px !important;">
 				  	${mess}
 				</div>
 				</c:if>
-            <form action="login" method="post">
-                <h2>Sign in</h2>
                 <div class="inputBox">
                     <input name="user" value="${username }"  type="text" required="required">
                     <span>User name</span>

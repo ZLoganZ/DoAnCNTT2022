@@ -36,17 +36,53 @@
 <div class="box">
             <form action="forgotPassword" method="post">
                 <h2>Forgot password</h2>
-                <p class="text-success">${mess}</p>
-                <p class="text-danger">${error}</p>
+                <c:if test="${mess!=null }">
+                    <style>
+                        .box {
+                            height: 450px !important;
+                        }
+                        .box::before{
+                            height: 450px !important;
+                        }
+                        .box::after{
+                            height: 450px !important;
+                        }
+                        .inputBox{
+                            margin-top: 20px !important;
+                        }
+                    </style>
+                    <p class="alert alert-success" style="margin-top:10px !important;">${mess}</p>
+                </c:if>
+                <c:if test="${error!=null }">
+                    <style>
+                        .box {
+                            height: 450px !important;
+                        }
+                        .box::before{
+                            height: 450px !important;
+                        }
+                        .box::after{
+                            height: 450px !important;
+                        }
+                        .inputBox{
+                            margin-top: 20px !important;
+                        }
+                    </style>
+                    <p class="alert alert-danger" style="margin-top:10px !important;">${error}</p>
+                </c:if>
                 <div class="inputBox">
                     <input name="username" type="text" required="required">
                     <span>Username</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input name="email" type="text" required="required">
+                    <input name="email" type="email" required="required">
                     <span>Email</span>
                     <i></i>
+                </div>
+                <div class="links">
+                    <a href="login"><i class="fas fa-angle-left"></i> Back to Sign in</a>
+                    <a href="signup">Create a new account</a>
                 </div>
                 <input type="submit" value="Retrieve">
             </form>

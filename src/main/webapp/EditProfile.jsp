@@ -25,7 +25,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
     <!-- MDB -->
     <link rel="stylesheet" href="css/mdb.min.css" />
     <!-- Custom styles -->
-    <link rel="stylesheet" href="css/style.css" />
+    <style><%@include file="/css/editP.css"%></style>
     
       <!-- Roboto Font -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap"> 
@@ -41,56 +41,73 @@ uri="http://java.sun.com/jsp/jstl/core"%>
   </head>
   <body>
     <jsp:include page="Menu.jsp"></jsp:include>
-    <div id="logreg-forms" style="margin-top: 100px;">
-      <form class="form-signin" action="editProfile" method="post">
-        <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">
-          Edit Profile
-        </h1>
-        <p class="text-success">${mess}</p>
-        <p class="text-danger">${error}</p>
-        <label for="username">Username</label>
-        <input
+    <div class="box">
+      <form action="editProfile" method="post">
+        <h2>Edit Profile</h2>
+        <c:if test="${error!=null }">
+                <style>
+                    .inputBox{
+                        margin-top: 20px !important;
+                    }
+                </style>
+                 <div class="alert alert-danger" role="alert" style="margin-top:10px !important;">
+						 ${error}
+				</div>
+				</c:if>
+				<c:if test="${mess!=null }">
+                    <style>
+                        .inputBox{
+                            margin-top: 20px !important;
+                        }
+                    </style>
+                <div class="alert alert-success" role="alert" style="margin-top:10px !important;">
+				  	${mess}
+				</div>
+				</c:if>
+        <div class="inputBox">
+          <input
           name="username"
           type="text"
-          id="username"
-          class="form-control"
           value="${sessionScope.acc.user}"
-          required=""
-          autofocus=""
+          required="required"
         />
-        <label for="name">Name</label>
-        <input
+        <span>Username</span>
+        <i></i>
+        </div>
+        <div class="inputBox">
+          <input
           name="name"
           type="text"
-          id="name"
-          class="form-control"
           value="${sessionScope.acc.name}"
-          required=""
-          autofocus=""
+          required="required"
         />
-        <label for="password">Password</label>
-        <input
+        <span>Name</span>
+        <i></i>
+        </div>
+        
+        <div class="inputBox">
+          <input
           name="password"
           type="password"
-          id="password"
-          class="form-control"
           value="${sessionScope.acc.pass}"
-          required=""
-          autofocus=""
+          required="required"
         />
-        <label for="email">Email</label>
-        <input
+        <span>Password</span>
+        <i></i>
+        </div>
+        
+        <div class="inputBox">
+          <input
           name="email"
-          type="text"
-          id="email"
-          class="form-control"
+          type="email"
           value="${sessionScope.acc.email}"
-          required=""
-          autofocus=""
+          required="required"
         />
-        <button class="btn btn-success btn-block" type="submit">
-          <i class="fas fa-sign-in-alt"></i> Edit
-        </button>
+        <span>Email</span>
+        <i></i>
+        </div>
+        
+        <input type="submit" value="Edit">
       </form>
     </div>
 

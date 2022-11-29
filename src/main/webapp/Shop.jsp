@@ -193,7 +193,7 @@
                       <option value="4">Category 4</option>
                       <option value="5">Category 5</option>
                     </select>
-                    <label>Tất cả sản phẩm</label>
+                    <label>All products</label>
                     <button class="btn-save btn btn-primary btn-sm mt-2">Save</button>
                   </div>
                 </div>

@@ -1591,6 +1591,18 @@ public class DAO {
         }
     }
 
+    public void deleteProductCart(int accountID, int productID) {
+        String query = "delete from Cart where [accountID]=? and [productID]=?";
+        try {
+            conn = new DBContext().getConnection();//mo ket noi voi sql
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, accountID);
+            ps.setInt(2, productID);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+    }
+
    public static void main(String[] args) {
         DAO dao = new DAO();
 //        List<Review> list = 

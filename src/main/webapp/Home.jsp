@@ -21,6 +21,7 @@
     <!-- Custom styles -->
     <link rel="stylesheet" href="css/style.css" />
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="https://use.fontawesome.com/releases/vVERSION/js/all.js" data-auto-replace-svg="nest"></script>
       <!-- Roboto Font -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap"> 
   
@@ -135,7 +136,7 @@
             
               
              <div class="row" style="background: linear-gradient(45deg, #ff216d, #2196f3); padding: 20px;border-radius: 20px !important; ">            
-				<h1 style="text-align:center; width:100%; color: red !important;" id="moiNhat">SẢN PHẨM MỚI NHẤT</h1>
+				<h1 style="text-align:center; width:100%; color: rgb(0, 0, 0) !important;" id="moiNhat">Latest Product</h1>
                     <div class="col-sm-12" style = "text-align: center;">
                         <div id="contentMoiNhat" class="row">
                         <c:forEach items="${list8Last}" var="o">
@@ -158,7 +159,7 @@
                             </div>
                         </c:forEach>
                     </div>
-                  <button onclick="loadMoreNew()" class="btn btn-primary">Xem thêm</button>
+                  <button onclick="loadMoreNew()" class="btn btn-primary">More <i class="fas fa-angle-double-right"></i></button>
                 </div>
 
             </div>
@@ -188,7 +189,7 @@
                             </div>
                         </c:forEach>
                     </div>
-                   <button onclick="loadMoreNike()" class="btn btn-primary">Xem thêm</button>
+                   <button onclick="loadMoreNike()" class="btn btn-primary">More <i class="fas fa-angle-double-right"></i></button>
                 </div>
             </div>
             
@@ -217,7 +218,7 @@
                             </div>
                         </c:forEach>
                     </div>
-                   <button onclick="loadMoreAdidas()" class="btn btn-primary">Xem thêm</button>
+                   <button onclick="loadMoreAdidas()" class="btn btn-primary">More <i class="fas fa-angle-double-right"></i></button>
                 </div>
             </div>
             
