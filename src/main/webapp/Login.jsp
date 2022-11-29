@@ -12,13 +12,13 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-        <link href="css/login.css" rel="stylesheet" type="text/css"/>
+        <style><%@include file="/css/login.css"%></style>
         <title>Login Form</title>
     </head>
     <body>
     <jsp:include page="Menu.jsp"></jsp:include>
     
-        <div id="logreg-forms">
+        <div class="box">
         	<c:if test="${error!=null }">
                  <div class="alert alert-danger" role="alert">
 						 ${error}
@@ -29,31 +29,25 @@
 				  	${mess}
 				</div>
 				</c:if>
-            <form class="form-signin" action="login" method="post">
-                <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>  
-                <input name="user" value="${username }"  type="text" id="inputEmail" class="form-control" placeholder="Username" required="" autofocus="">
-                <input name="pass" value="${password }" type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-
-                <div class="form-group form-check">
-                    <input name="remember" value="1" type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+            <form action="login" method="post">
+                <h2>Sign in</h2>
+                <div class="inputBox">
+                    <input name="user" value="${username }"  type="text" required="required">
+                    <span>User name</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input name="pass" value="${password }" type="password" required="required">
+                    <span>Password</span>
+                    <i></i>
                 </div>
 
-                <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Sign in</button>
-                <hr>
-                <a href="signup" id="btn-signup"><i class="fas fa-user-plus"></i> Sign up New Account</a>
+                <div class = "links">
+                    <a href="forgotPassword">Forgot password?</a>
+                    <a href="signup">Sign up</a>
+                </div>
+                <input type="submit" value="Sign in"></input>
             </form>
-
-            <!--  <form action="signup" method="post" class="form-signup">
-                <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign up</h1>
-                <input name="user" type="text" id="user-name" class="form-control" placeholder="User name" required="" autofocus="">
-                <input name="name" type="text" id="name" class="form-control" placeholder="Name" required="" autofocus="">
-                <input name="pass" type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="">
-                <input name="repass" type="password" id="user-repeatpass" class="form-control" placeholder="Repeat Password" required autofocus="">
-				 <input name="email" type="email" id="email" class="form-control" placeholder="Email" required="" autofocus="">
-                <button class="btn btn-primary btn-block" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
-                <a href="#" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
-            </form> -->
             <br>
 
         </div>

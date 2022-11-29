@@ -12,13 +12,13 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-        <link href="css/login.css" rel="stylesheet" type="text/css"/>
+        <style><%@include file="/css/signup.css"%></style>
         <title>Sign Up Form</title>
     </head>
     <body>
     <jsp:include page="Menu.jsp"></jsp:include>
     
-        <div id="logreg-forms">
+        <div class="box">
         	<c:if test="${error!=null }">
                  <div class="alert alert-danger" role="alert">
 						 ${error}
@@ -29,57 +29,54 @@
 				  	${mess}
 				</div>
 				</c:if>
-          <!--<form class="form-signin" action="login" method="post">
-                <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>  
-                <input name="user" value="${username }"  type="text" id="inputEmail" class="form-control" placeholder="Username" required="" autofocus="">
-                <input name="pass" value="${password }" type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
 
-                <div class="form-group form-check">
-                    <input name="remember" value="1" type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+            <form action="signup" method="post">
+                <h2>Sign up</h2>
+                <div class="inputBox">
+                    <input name="user" type="text" required="required">
+                    <span>
+                        Username
+                    </span>
+                    <i></i>
                 </div>
-
-                <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Sign in</button>
-                <hr>
-                <button class="btn btn-primary btn-block" type="button" id="btn-signup"><i class="fas fa-user-plus"></i> Sign up New Account</button>
-            </form>-->
-
-            <form action="signup" method="post" class="form-signin">
-                <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign up</h1>
-                <input name="user" type="text" id="user-name" class="form-control" placeholder="User name" required="" autofocus="">
-                <input name="name" type="text" id="name" class="form-control" placeholder="Name" required="" autofocus="">
-                <input name="pass" type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="">
-                <input name="repass" type="password" id="user-repeatpass" class="form-control" placeholder="Repeat Password" required autofocus="">
-				<input name="email" type="email" id="email" class="form-control" placeholder="Email" required="" autofocus="">
-                <button class="btn btn-primary btn-block" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
-                <a href="login" id="cancel_signup"><i class="fas fa-angle-left"></i> Back to Login Page</a>
+                <div class="inputBox">
+                    <input name="name" type="text" required="required">
+                    <span>
+                        Name
+                    </span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input name="pass" type="password" required="required">
+                    <span>
+                        Password
+                    </span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input name="repass" type="password" required="required">
+                    <span>
+                        Re-Password
+                    </span>
+                    <i></i>
+                </div>
+				<div class="inputBox">
+                    <input name="email" type="email" required="required">
+                    <span>
+                        Email
+                    </span>
+                    <i></i>
+                </div>
+                <div class="links">
+                    <a href="login"><i class="fas fa-angle-left"></i> Back to Sign in</a>
+                </div>
+                <input type="submit" value="Sign up"></input>
             </form>
-            <br>
 
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script>
-            function toggleResetPswd(e) {
-                e.preventDefault();
-                $('#logreg-forms .form-signin').toggle() // display:block or none
-                $('#logreg-forms .form-reset').toggle() // display:block or none
-            }
-
-            function toggleSignUp(e) {
-                e.preventDefault();
-                $('#logreg-forms .form-signin').toggle(); // display:block or none
-                $('#logreg-forms .form-signup').toggle(); // display:block or none
-            }
-
-            $(() => {
-                // Login Register Form
-                //$('#logreg-forms #forgot_pswd').click(toggleResetPswd);
-                //$('#logreg-forms #cancel_reset').click(toggleResetPswd);
-                //$('#logreg-forms #btn-signup').click(toggleSignUp);
-                //$('#logreg-forms #cancel_signup').click(toggleSignUp);
-            })
-            
             window.addEventListener("load",function loadAmountCart(){
                         	 $.ajax({
                                  url: "/WebsiteBanGiay/loadAllAmountCart",
