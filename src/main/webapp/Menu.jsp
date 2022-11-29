@@ -163,7 +163,7 @@
             <a
               class="btn btn-success btn-sm ml-3"
               href="managerCart"
-              style="background-color: black !important"
+              style="background-color: black !important; border-radius: 7px !important;"
             >
               <i class="fa fa-shopping-cart"></i>
               <span style="font-size: 14px">Cart</span>
