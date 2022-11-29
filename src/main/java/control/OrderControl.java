@@ -170,7 +170,7 @@ public class OrderControl extends HttpServlet {
 					}
 				}
 				sb.append("Vat: <b>10%</b> <br>");
-				sb.append("Total Money: ").append(String.format("%.02f",totalMoneyVAT)).append("$").append("<br>");
+				sb.append("Total Money: <b>").append(String.format("%.02f",totalMoneyVAT)).append("$").append("</b> <br>");
 				sb.append("Thank you for ordering at King Shoes!<br>");
 				sb.append("Store owner <br>");
 				sb.append("<b>LoganZ</b>");
