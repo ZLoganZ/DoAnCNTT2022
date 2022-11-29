@@ -165,13 +165,14 @@ public class OrderControl extends HttpServlet {
 				for(Cart c : list) {
 					for(Product p : list2) {
 						if(c.getProductID()==p.getId()) {
-							sb.append(p.getName()).append(" | ").append("Price:").append(p.getPrice()).append("$").append(" | ").append("Amount:").append(c.getAmount()).append(" | ").append("Size:").append(c.getSize()).append("<br>");
+							sb.append(p.getName()).append(" | ").append("Price: ").append(p.getPrice()).append("$").append(" | ").append("Amount: ").append(c.getAmount()).append(" | ").append("Size: ").append(c.getSize()).append("<br>");
 						}
 					}
 				}
+				sb.append("Vat: <b>10%</b> <br>");
 				sb.append("Total Money: ").append(String.format("%.02f",totalMoneyVAT)).append("$").append("<br>");
 				sb.append("Thank you for ordering at King Shoes!<br>");
-				sb.append("Store owner");
+				sb.append("Store owner <br>");
 				sb.append("<b>LoganZ</b>");
 				
 				email.setContent(sb.toString());
