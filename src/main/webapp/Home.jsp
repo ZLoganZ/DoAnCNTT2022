@@ -138,9 +138,9 @@
              <div class="row" style="background: linear-gradient(45deg, #ff216d, #2196f3); padding: 20px;border-radius: 20px !important; ">            
 				<h1 style="text-align:center; width:100%; color: rgb(0, 0, 0) !important;" id="moiNhat">Latest Product</h1>
                     <div class="col-sm-12" style = "text-align: center;">
-                        <div id="contentMoiNhat" class="row">
+                        <div id="content" class="row">
                         <c:forEach items="${list8Last}" var="o">
-                            <div class=" col-12 col-md-6 col-lg-3" style="margin-bottom: 20px !important;">
+                            <div class="product col-12 col-md-6 col-lg-3" style="margin-bottom: 20px !important;">
                                 <div class="card">
                                 <div class="view zoom z-depth-2 rounded">
                                     <img class="img-fluid w-100" src="${o.image}" style="cursor: pointer;" alt="Card image cap">
