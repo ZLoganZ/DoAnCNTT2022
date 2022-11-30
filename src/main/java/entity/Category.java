@@ -7,7 +7,7 @@ package entity;
 
 /**
  *
- * @author trinh
+ * @author LoganZ
  */
 public class Category {
     private int cid;

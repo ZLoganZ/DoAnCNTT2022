@@ -7,7 +7,7 @@ package entity;
 
 /**
  *
- * @author 
+ * @author LoganZ
  */
 public class Product {
     private int id;
