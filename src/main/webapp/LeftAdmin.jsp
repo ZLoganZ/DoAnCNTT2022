@@ -34,7 +34,7 @@
           <i class="fas fa-parachute-box fa-fw me-3"></i><span>Quản lý nhà cung cấp</span>
         </a>
         <a href="home" class="list-group-item list-group-item-action py-2 ripple">
-          <i class="fas fa-home"></i><span>Quay về trang chủ</span>
+          <i class="fas fa-home fa-fw me-3"></i><span>Quay về trang chủ</span>
         </a>
       </div>
     </div>
