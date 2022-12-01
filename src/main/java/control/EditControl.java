@@ -36,6 +36,8 @@ public class EditControl extends HttpServlet {
         String pid = request.getParameter("id");
         String pname = request.getParameter("name");
         String pimage = request.getParameter("image");
+        String index = request.getParameter("index");
+        int indexPage = Integer.parseInt(index.toString());
         
         String pimage2 = request.getParameter("image2");
         String pimage3 = request.getParameter("image3");
@@ -51,7 +53,7 @@ public class EditControl extends HttpServlet {
         DAO dao = new DAO();
         dao.editProduct(pname, pimage, pprice, ptitle, pdescription, pcategory, pmodel, pcolor, pdelivery, pimage2, pimage3, pimage4, pid);
        request.setAttribute("mess", "Edited!");
-       request.getRequestDispatcher("manager").forward(request, response);
+       request.getRequestDispatcher("manager?index=" + indexPage).forward(request, response);
 //        response.sendRedirect("manager");
     }
 

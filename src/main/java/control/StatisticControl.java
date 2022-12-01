@@ -81,6 +81,7 @@ public class StatisticControl extends HttpServlet {
         int allReview = dao.countAllReview();
         int allProduct = dao.countAllProduct();
         double sumAllInvoice = dao.sumAllInvoice();
+        sumAllInvoice = Math.round(sumAllInvoice * 100.0) / 100.0;
         
         List<Invoice> listAllInvoice = dao.getAllInvoice();
         List<Account> listAllAccount = dao.getAllAccount();

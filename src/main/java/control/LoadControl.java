@@ -34,12 +34,15 @@ public class LoadControl extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         String id = request.getParameter("pid");
+        String index = request.getParameter("index");
+        int indexPage = Integer.parseInt(index);
         DAO dao = new DAO();
         Product p = dao.getProductByID(id);
         List<Category> listC = dao.getAllCategory();
 
         request.setAttribute("detail", p);
         request.setAttribute("listCC", listC);
+        request.setAttribute("index", indexPage);
         request.getRequestDispatcher("Edit.jsp").forward(request, response);
     }
 

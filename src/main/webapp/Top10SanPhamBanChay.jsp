@@ -134,7 +134,7 @@
                    <td>${o.id}</td>
                     <td>${o.name}</td>
                      <td>
-                          <img src="${o.image}">
+                          <img src="${o.image}" style="height: 100% !important; width: 100% !important;"> 
                     </td>
                      <td>${o.price} $</td>
                       <td>${t.soLuongDaBan }</td>

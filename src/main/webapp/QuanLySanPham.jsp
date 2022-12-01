@@ -152,12 +152,13 @@
                    <td>${o.id}</td>
                     <td>${o.name}</td>
                      <td>
-                          <img src="${o.image}">
+                          <img src="${o.image}" style="height: 100% !important; width: 100% !important;">
                     </td>
                      <td>${o.price} $</td>
                       <td>
-                              <a href="loadProduct?pid=${o.id}"><button type="button" class="btn btn-warning"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></button></a>
-                              <a href="delete?pid=${o.id}"><button type="button" class="btn btn-danger"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></button></a>
+                              <a href="loadProduct?pid=${o.id}&index=${tag}"><button type="button" class="btn btn-warning"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></button></a>
+                              <a href="#deleEmployeeModal" data-toggle="modal"><button type="button" class="btn btn-danger"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></button></a>
+                              <input hidden id="pid" type="text" value="${o.id}">
                       </td>
                 </tr>
                 </c:forEach>
@@ -187,6 +188,24 @@
   
     
 </main>
+
+<!--Main layout-->
+<div id="deleEmployeeModal" class="modal fade">
+  <div class="modal-dialog" style="margin-top:300px;">
+      <div class="modal-content" style="width:580px !important;">
+          <form action="delete" method="post">
+            <div class="modal-header">						
+              <h4 class="modal-title">Are you sure you want to delete this product?</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>          
+              <div class="modal-footer" style="justify-items:center !important; align-items:center !important;">  
+                  <input id="delete" type="button" class="btn btn-success" value="Delete">
+                  <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel"> 
+              </div>
+          </form>
+      </div>
+  </div>
+</div>
  
       <!-- Edit Modal HTML -->
         <div id="addEmployeeModal" class="modal fade">
