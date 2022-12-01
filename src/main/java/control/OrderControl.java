@@ -74,6 +74,7 @@ public class OrderControl extends HttpServlet {
 						sell_ID=dao.getSellIDByProductID(p.getId());
 						tongTienBanHangThem=tongTienBanHangThem+(p.getPrice()*c.getAmount());
 						TongChiTieuBanHang t2 = dao.checkTongChiTieuBanHangExist(accountID);
+						tongTienBanHangThem = Math.round(tongTienBanHangThem*100.0)/100.0;
 						if(t2==null) {
 							dao.insertTongChiTieuBanHang(accountID,0,tongTienBanHangThem);
 						}
@@ -101,6 +102,7 @@ public class OrderControl extends HttpServlet {
 	        
 	        dao.insertInvoice(accountID, totalMoneyVAT);
 	        TongChiTieuBanHang t = dao.checkTongChiTieuBanHangExist(accountID);
+	        totalMoneyVAT = Math.round(totalMoneyVAT*100.0)/100.0;
 	        if(t==null) {
 	        	dao.insertTongChiTieuBanHang(accountID,totalMoneyVAT,0);
 	        }
