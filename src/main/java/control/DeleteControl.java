@@ -6,6 +6,8 @@
 package control;
 
 import dao.DAO;
+import entity.SoLuongDaBan;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -31,12 +33,24 @@ public class DeleteControl extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         String pid = request.getParameter("pid");
+        String index = request.getParameter("index");
+        if(index == null) {
+        	index="1";
+        }
+        int indexPage = Integer.parseInt(index);
         DAO dao = new DAO();
-        dao.deleteCartByProductID(pid);
-        dao.deleteReviewByProductID(pid);
-        dao.deleteProduct(pid);
-        request.setAttribute("mess", "Deleted!");
-        request.getRequestDispatcher("manager").forward(request, response);
+        SoLuongDaBan sldb = dao.checkProduct(pid);
+        if(sldb == null){
+            dao.deleteCartByProductID(pid);
+            dao.deleteReviewByProductID(pid);
+            dao.deleteProduct(pid);
+            request.setAttribute("mess", "Deleted!");
+            request.getRequestDispatcher("manager?index=" + indexPage).forward(request, response);
+        }
+        else{
+            request.setAttribute("error", "Can't delete this product!");
+            request.getRequestDispatcher("manager?index=" + indexPage).forward(request, response);
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -37,6 +37,9 @@ public class EditControl extends HttpServlet {
         String pname = request.getParameter("name");
         String pimage = request.getParameter("image");
         String index = request.getParameter("index");
+        if(index == null){
+            index = "1";
+        }
         int indexPage = Integer.parseInt(index.toString());
         
         String pimage2 = request.getParameter("image2");

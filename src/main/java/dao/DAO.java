@@ -1221,7 +1221,25 @@ public class DAO {
             ps.setString(1, pid);
             ps.executeUpdate();
         } catch (Exception e) {
+            System.out.println(e);
         }
+    }
+
+    public SoLuongDaBan checkProduct(String pid) {
+        String query = "select * from SoLuongDaBan\n"
+                + "where [productID] = ?";
+        try {
+            conn = new DBContext().getConnection();//mo ket noi voi sql
+            ps = conn.prepareStatement(query);
+            ps.setString(1, pid);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return new SoLuongDaBan(rs.getInt(1),
+                        rs.getInt(2));
+            }
+        } catch (Exception e) {
+        }
+        return null;
     }
     
     public void deleteProductBySellID(String id) {
@@ -1256,6 +1274,7 @@ public class DAO {
             ps.setString(1, productID);
             ps.executeUpdate();
         } catch (Exception e) {
+            System.out.println(e);
         }
     }
     
@@ -1267,6 +1286,7 @@ public class DAO {
             ps.setString(1, productID);
             ps.executeUpdate();
         } catch (Exception e) {
+            System.out.println(e);
         }
     }
     
