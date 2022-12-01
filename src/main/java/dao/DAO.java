@@ -275,8 +275,8 @@ public class DAO {
             while (rs.next()) {
                 list.add(new TongChiTieuBanHang(rs.getInt(1),
                         rs.getDouble(2),
-                        rs.getDouble(3)
-                       ));
+                        Math.round(rs.getDouble(3)*100.0)/100.0));
+                       
             }
         } catch (Exception e) {
         }
@@ -295,7 +295,7 @@ public class DAO {
             while (rs.next()) {
                 list.add(new TongChiTieuBanHang(rs.getInt(1),
                         rs.getDouble(2),
-                        rs.getDouble(3)
+                        Math.round(rs.getDouble(3)*100.0)/100.0
                        ));
             }
         } catch (Exception e) {
