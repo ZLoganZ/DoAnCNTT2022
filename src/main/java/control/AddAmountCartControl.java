@@ -43,6 +43,7 @@ public class AddAmountCartControl extends HttpServlet {
         int accountID = a.getId();
         int productID = Integer.parseInt(request.getParameter("productID"));
         int amount = Integer.parseInt(request.getParameter("amount"));
+        String size = request.getParameter("size");
         if(amount == 10) {
         	request.setAttribute("mess", "The maximum number of products is 10!");
         	request.getRequestDispatcher("managerCart").forward(request, response);
@@ -50,7 +51,7 @@ public class AddAmountCartControl extends HttpServlet {
         else {
         	amount+=1;
             DAO dao = new DAO();
-            dao.editAmountCart(accountID, productID, amount);
+            dao.editAmountCart(accountID, productID, amount, size);
             request.setAttribute("mess", "The number of products has been increased!");
             request.getRequestDispatcher("managerCart").forward(request, response);
         }

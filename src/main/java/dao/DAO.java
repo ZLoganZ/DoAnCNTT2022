@@ -898,6 +898,72 @@ public class DAO {
       return null;
    }
     
+   public Cart checkProductSizeCartExist(int accountID,int productID, String size) {
+    
+       String query = "select * from Cart\r\n"
+       		+ "where [accountID] = ? and [productID] = ? and [size] = ?";
+       try {
+           conn = new DBContext().getConnection();//mo ket noi voi sql
+           ps = conn.prepareStatement(query);
+           ps.setInt(1, accountID);
+           ps.setInt(2, productID);
+           ps.setString(3, size);
+           rs = ps.executeQuery();
+           while (rs.next()) {
+               return new Cart(rs.getInt(1),
+                       rs.getInt(2),
+                       rs.getInt(3),
+                       rs.getInt(4),
+                       rs.getString(5));
+           }
+       } catch (Exception e) {
+       }
+      return null;
+   }
+    
+    public void addCart(int accountID,int productID,int quantity,String date) {
+        String query = "insert into Cart values(?,?,?,?)";
+        try {
+            conn = new DBContext().getConnection();//mo ket noi voi sql
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, accountID);
+            ps.setInt(2, productID);
+            ps.setInt(3, quantity);
+            ps.setString(4, date);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+    }
+    
+    public void updateCart(int accountID,int productID,int quantity) {
+        String query = "update Cart\r\n"
+        		+ "set [quantity] = ?\r\n"
+        		+ "where [accountID] = ? and [productID] = ?";
+        try {
+            conn = new DBContext().getConnection();//mo ket noi voi sql
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, quantity);
+            ps.setInt(2, accountID);
+            ps.setInt(3, productID);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+    }
+    
+    public void deleteCart(int accountID,int productID) {
+        String query = "delete from Cart\r\n"
+        		+ "where [accountID] = ? and [productID] = ?";
+        try {
+            conn = new DBContext().getConnection();//mo ket noi voi sql
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, accountID);
+            ps.setInt(2, productID);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+    }
+
+
     public int checkAccountAdmin(int userID) {
 
         String query = "select isAdmin from Account where [uID]=?";
@@ -1581,43 +1647,29 @@ public class DAO {
         }
     }
     
-    public void editAmountAndSizeCart(int accountID, int productID, int amount, String size) {
-        String query = "update Cart set [amount]=?,\r\n"
-        		+ "[size]=?\r\n"
-        		+ "where [accountID]=? and [productID]=?";
-        try {
-            conn = new DBContext().getConnection();//mo ket noi voi sql
-            ps = conn.prepareStatement(query);
-            ps.setInt(1, amount);
-            ps.setString(2, size);
-            ps.setInt(3, accountID);
-            ps.setInt(4, productID);
-            ps.executeUpdate();
-        } catch (Exception e) {
-        }
-    }
-    
-    public void editAmountCart(int accountID, int productID, int amount) {
+    public void editAmountCart(int accountID, int productID, int amount, String size) {
         String query = "update Cart set [amount]=?\r\n"
-        		+ "where [accountID]=? and [productID]=?";
+        		+ "where [accountID]=? and [productID]=? and [size]=?";
         try {
             conn = new DBContext().getConnection();//mo ket noi voi sql
             ps = conn.prepareStatement(query);
             ps.setInt(1, amount);
             ps.setInt(2, accountID);
             ps.setInt(3, productID);
+            ps.setString(4, size);
             ps.executeUpdate();
         } catch (Exception e) {
         }
     }
 
-    public void deleteProductCart(int accountID, int productID) {
-        String query = "delete from Cart where [accountID]=? and [productID]=?";
+    public void deleteProductCart(int accountID, int productID, String size) {
+        String query = "delete from Cart where [accountID]=? and [productID]=? and [size]=?";
         try {
             conn = new DBContext().getConnection();//mo ket noi voi sql
             ps = conn.prepareStatement(query);
             ps.setInt(1, accountID);
             ps.setInt(2, productID);
+            ps.setString(3, size);
             ps.executeUpdate();
         } catch (Exception e) {
         }

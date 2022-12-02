@@ -54,7 +54,7 @@ public class TotalMoneyCartControl extends HttpServlet {
         }
         
         double totalMoneyVAT=totalMoney*1.1;
-        totalMoneyVAT = Math.round(totalMoneyVAT);
+        totalMoneyVAT = Math.round(totalMoneyVAT*100.0)/100.0;
         
         	
         PrintWriter out = response.getWriter();

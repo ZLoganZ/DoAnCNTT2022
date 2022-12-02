@@ -42,8 +42,9 @@ public class DeleteCartControl extends HttpServlet {
         }
         int accountID = a.getId();
         int productID = Integer.parseInt(request.getParameter("productID"));
+        String size = request.getParameter("size");
         DAO dao = new DAO();
-        dao.deleteProductCart(accountID, productID);
+        dao.deleteProductCart(accountID, productID, size);
         request.setAttribute("mess", "Product removed from cart!");
         request.getRequestDispatcher("managerCart").forward(request, response);
     }

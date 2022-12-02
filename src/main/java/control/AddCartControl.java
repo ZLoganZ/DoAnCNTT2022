@@ -50,12 +50,25 @@ public class AddCartControl extends HttpServlet {
         DAO dao = new DAO();
         Cart cartExisted = dao.checkCartExist(accountID,productID);
         int amountExisted;
-        String sizeExisted;
         if(cartExisted != null) {
-        	 amountExisted = cartExisted.getAmount();
-        	 dao.editAmountAndSizeCart(accountID,productID, (amountExisted+amount), size);
-        	 request.setAttribute("mess", "The number of products has increased!");
-        	 request.getRequestDispatcher("managerCart").forward(request, response);
+            Cart sizeExisted = dao.checkProductSizeCartExist(accountID, productID, size);
+            if(sizeExisted != null) {
+                amountExisted = sizeExisted.getAmount();
+                if(amountExisted >= 10){
+                    request.setAttribute("error", "The maximum number of products is 10!");
+        	        request.getRequestDispatcher("managerCart").forward(request, response);
+                }
+                else{
+                    dao.editAmountCart(accountID,productID, (amountExisted+amount), size);
+        	        request.setAttribute("mess", "The number of products has increased!");
+        	        request.getRequestDispatcher("managerCart").forward(request, response);
+                }
+            }
+            else{
+                dao.insertCart(accountID, productID, amount, size);
+        	    request.setAttribute("mess", "Product added to cart!");
+        	    request.getRequestDispatcher("managerCart").forward(request, response);
+            }
         }
         else {
         	  dao.insertCart(accountID, productID, amount, size);

@@ -88,7 +88,7 @@
                                                         <strong>${o.amount}</strong>
                                                         <a href="addAmountCart?productID=${o.productID}&amount=${o.amount}"><button class="btnAdd">+</button></a>
                                                     </td>
-                                                    <td class="align-middle"><a href="deleteCart?productID=${o.productID }" class="text-dark">
+                                                    <td class="align-middle"><a href="deleteCart?productID=${o.productID }&size=${o.size}" class="text-dark">
                                                             <button type="button" class="btn btn-danger">Delete</button>
                                                         </a>
                                                     </td>
