@@ -235,7 +235,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
         
-        	 function loadMore() {
+        	 function loadMoreNew() {
                  var amount = document.getElementsByClassName("product").length;
                  $.ajax({
                      url: "/WebsiteBanGiay/load",
