@@ -16,6 +16,6 @@ Link Webiste: http://13.214.3.232/WebsiteBanGiay/home
 6. Xong bước thêm server, giờ ta cần import project và chạy nó lên <img src="https://i.imgur.com/6Lw233N.png"> <img src="https://i.imgur.com/veThoPF.png"> <img src="https://i.imgur.com/LEWpbag.png"> <img src="https://i.imgur.com/qnvC34s.png">
 7. Tận hưởng Website!!!!
  
-###Lưu ý:
+### Lưu ý:
  - Chạy file script SQL theo đúng phiên bản (thường hoặc VPS, không dùng file old), sau đó sửa lại đường dẫn trong `D:\Linh-tinh\VSCode\WEB\DoAnCNTT2022\src\main\java\context\DBContext.java`
  - Tài khoản full quyền: `hoanghai` `123456`
