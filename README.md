@@ -17,5 +17,5 @@ Link Webiste: http://13.214.3.232/WebsiteBanGiay/home
 7. Tận hưởng Website!!!!
  
 ### Lưu ý:
- - Chạy file script SQL theo đúng phiên bản (thường hoặc VPS, không dùng file old), sau đó sửa lại đường dẫn trong `D:\Linh-tinh\VSCode\WEB\DoAnCNTT2022\src\main\java\context\DBContext.java`
+ - Chạy file script SQL theo đúng phiên bản (thường hoặc VPS, không dùng file old), sau đó sửa lại thông SQL Server trong `D:\Linh-tinh\VSCode\WEB\DoAnCNTT2022\src\main\java\context\DBContext.java`
  - Tài khoản full quyền: `hoanghai` `123456`
